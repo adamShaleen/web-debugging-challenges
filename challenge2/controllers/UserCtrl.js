@@ -2,7 +2,7 @@ var User = require('../models/User');
 
 module.exports = {
 
-  create: function(req, res) {
+  create: function(req, res, next) {
     var newUserDocument = new User(req.body);
     newUserDocument.save(function(err, result) {
       if (err) return res.status(500).send(err);
@@ -10,7 +10,7 @@ module.exports = {
     });
   },
 
-  read: function(req, res) {
+  read: function(req, res, next) {
     User.find(req.query)
     .exec(function(err, result) {
       if (err) return res.status(500).send(err);
@@ -18,7 +18,7 @@ module.exports = {
     });
   },
 
-  update: function(req, res) {
+  update: function(req, res, next) {
     User.findByIdAndUpdate(
       req.params.id,
       req.body,
@@ -29,7 +29,7 @@ module.exports = {
     );
   },
 
-  delete: function(req, res) {
+  delete: function(req, res, next) {
     User.findByIdAndRemove(
       req.params.id,
       function(err, result) {

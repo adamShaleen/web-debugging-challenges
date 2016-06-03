@@ -1,0 +1,5 @@
+-Config needed ending parenthesis removed and commas added.
+-change ui-router to ui.router
+-products controller needed ending curly bracket on closing tag
+-changed spelling of settingsCtrl on config
+-had to add closing bracket to UI-router CDN.

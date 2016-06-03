@@ -1,0 +1,4 @@
+-changed spelling of READ on server Endpoint
+-had to start mongo
+
+-succesfully can CRUD users and can only READ sightings.

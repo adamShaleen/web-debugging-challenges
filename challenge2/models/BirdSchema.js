@@ -1,4 +1,4 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 var birdSchema = new mongoose.Schema({
     name: { type: String, lowercase: true },
@@ -17,6 +17,6 @@ var birdSchema = new mongoose.Schema({
         'least concern'
       ]
     }
-})
+});
 
 module.exports = birdSchema;
